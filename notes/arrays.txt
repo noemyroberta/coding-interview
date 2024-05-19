@@ -40,3 +40,20 @@ memória. É possível, inclusive, acessar posições que não necessariamente e
 na String. Em linguagens mais modernas, como Dart, não é possível, pois acusa a 
 exceção "Index out of range", que significa que o índice especificado ao tentar 
 acessar na lista de "char", está fora do intervalo da lista.
+
+@ O que há de especial sobre Arrays?
+
+O tempo de acesso CONSTANTE a cada parte da lista de elementos, tanto para lê-lo,
+como para escrevê-lo.
+
+# Arrays multidimensionais
+- Row-major: linha principal, quando o valor da linha é mais frequente.
+Ex.: [(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (2, 1), ...]
+- Column-major: coluna principal, quando o valor da coluna é mais frequente.
+Ex.: [(1,1), (2,1), (3,1), (1,2), (2,2), (3,2), (1,3, ...)]
+
+Tempos de operações comuns:
+______ | Adc  | Remover
+Início | O(n) | O(n)
+Fim    | O(1) | O(1)
+Meio   | O(n) | O(n)
