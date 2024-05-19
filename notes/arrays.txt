@@ -1,0 +1,42 @@
+# Array
+
+Os tipos de dados (bool, char, double, float, int, long, string) ocupam uma 
+quantidade fixa de bytes na memória para os tipos de dados primitivos.
+Os tipos de dados primitivos são assim chamados porque são a BASE da programação
+para qualquer tipos de linguagem de programação, e são basilares para os tipos 
+de dados mais complexos: structs (C), classes e objetos (linguagens que suportam 
+o paradigma de orientação a objetos), Maps e Sets (Java, Dart) e outros tipos.
+Os programas que são executados em tempo real e os arquivos que estão sendo abertos
+são armazenados na memória volátil de processamento (memória RAM). As memória de
+armazenamento de dados persistentes (HDD, SSD, CD) e não exigem energia para armazenar
+os dados a longo prazo. A memória RAM (Random Access Memory - memória de acesso aleatório) 
+é diferente pois é puramente eletrônica, ou seja, perderá todos os seus dados no momento 
+que a bateria do dispositivo acabar.
+A memória possui chips (retângulos pretos) e podemos dizer que existe uma grade
+em que cada célula da grade é uma alocação para dados e armazenam uma
+quantidade específica de bytes. Os dados que são armazenados em cada célula 
+correspondem aos dados que são atribuídos às variáveis do programa.
+
+Um array é uma estrutura de armazenamento de dados que aloca dados lado a lado
+na memória.
+
+@ Por que o array sempre começa a partir da posição 0?
+
+A alocação de dados em um array começar em zero, assim como sua contagem, deve-se
+em essência, a duas pessoas: Martin Richards e Dijkstra, Martin foi o criador da 
+linguagem BCPL, um precursor de C, em que desenhou arrays iniciando em 0 pela sua 
+neutralidade no cálculo do acesso de um ponteiro à memória 
+(endereço do elemento = endereço base + índice). Dijkstra também confirmou essa 
+normativa na sua nota "Why numbering should start at zero", citando a importância 
+de se começar em zero quando se trata de intervalos.
+
+# String 
+
+Como char, um tipo primitivo para definir um caractere, necessita de apenas 1 byte 
+na memória RAM, então uma String, um tipo composto de dado, é um array de char, 
+ou seja, uma lista com caracteres lado a lado na memória.
+Em C, a string tem um caractere marcador de final "\0" que também é alocado na 
+memória. É possível, inclusive, acessar posições que não necessariamente existem 
+na String. Em linguagens mais modernas, como Dart, não é possível, pois acusa a 
+exceção "Index out of range", que significa que o índice especificado ao tentar 
+acessar na lista de "char", está fora do intervalo da lista.
